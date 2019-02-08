@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Procedural art</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div id="config">
+
+      <h3>Parameters (press c to show/hide)</h3>
+      <p>
+        <b>Press R</b> to generate a new canvas.<br/>
+        You can right click > save image as to save your creation.<br />
+        Warning with N parameter, too much can crash your navigator !
+      </p>
+
+        <div id="config_params">
+
+          <span>Color delta</span>
+          <input type="range" min="0" max="30" value="6" step="0.1" oninput="o_color.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="6" id="color" />
+
+          <span>Position delta</span>
+          <input type="range" min="0" max="200" value="50" step="0.1" oninput="o_position.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="50" id="position" />
+
+          <span>Radius</span>
+          <input type="range" min="0" max="500" value="100" step="0.1" oninput="o_radius.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="100" id="radius" />
+
+          <span>Speed delta</span>
+          <input type="range" min="0" max="30" value="4" step="0.01" oninput="o_speed.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="4" id="speed" />
+
+          <span>N</span>
+          <input type="range" min="0" max="10000" value="500" step="1" oninput="o_n.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="500" id="n" />
+
+          <span>Min Alpha</span>
+          <input type="range" min="0" max="255" value="200" step="1" oninput="o_min_alpha.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="200" id="min_alpha" />
+
+          <span>Alpha delta</span>
+          <input type="range" min="-255" max="255" value="100" step="1" oninput="o_alpha.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="100" id="alpha" />
+
+          <span>Background light</span>
+          <input type="range" min="-255" max="255" value="100" step="1" oninput="o_light.value=this.value" />
+          <input type="text" onkeypress="return isNumberKey(event)" value="100" id="light" />
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="script2.js"></script>
+    <script src="gui.js"></script>
+
+  </body>
+
+
+</html>

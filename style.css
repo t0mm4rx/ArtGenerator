@@ -1,0 +1,40 @@
+body, html {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open sans'
+}
+
+*:focus {
+  outline: none;
+}
+
+#config {
+  position: absolute;
+  background-color: rgba(255, 255, 255, .6);
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+}
+
+.slider_group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#config_params{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+  width: 100%;
+}
+
+#config_params input[type="text"] {
+  max-width: 50px;
+  border: 0;
+  padding: 5px;
+}
